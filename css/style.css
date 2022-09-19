@@ -178,11 +178,11 @@ a {
     border-radius: 10px;
     position: relative;
     overflow: hidden;
-    display: none;
+    /* display: none; */
 }
-.work-list .work.main{
+/* .work-list .work.main{
     display: block;
-}
+} */
 .work img {
     width: 100%;
     border-radius: 10px;

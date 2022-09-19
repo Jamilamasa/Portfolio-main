@@ -1,3 +1,4 @@
+const work = new Work();
 // About me script
 const skillsTab = document.querySelector('.skills-tab');
 const experienceTab = document.querySelector('.experience-tab');
@@ -42,18 +43,30 @@ function showEducation(){
 
 // My work (show more)
 const showMoreBtn = document.querySelector('.show-more');
+const workList = document.querySelector('.work-list')
 const works = document.querySelectorAll('.work');
 
 
 showMoreBtn.addEventListener('click', (e)=>{
-    works.forEach((work)=>{
-        work.classList.add('main');
+    work.getWork().then((works)=>{
+        output = ''
+        works.forEach((work)=>{
+            output += `
+            <div class="work">
+            <img src=${work.img} alt=${work.title}>
+            <div class="layer">
+                <h3>${work.title}</h3>
+                <p>${work.about}</p>
+                <a href="${work.url}" target="_blank"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+            </div>
+        </div>
+            `
+        })
+        workList.innerHTML += output;
     })
     showMoreBtn.style.display = "none"
     e.preventDefault()
 })
-
-
 
 
 // Sticky navbar background

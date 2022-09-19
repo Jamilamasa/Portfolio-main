@@ -1,0 +1,37 @@
+[
+    {
+        "id": 1,
+        "title": "Book List Application",
+        "about": "Readers want to store information about a book or multiple books. This application allows users create & manage a digital booklist.",
+        "img": "/work-img/book-list-img.png",
+        "url": "https://jamils-book-list.netlify.app/"
+    },
+    {
+        "id": 2,
+        "title": "EdgeLedger",
+        "about": "This is a website for an investment company.",
+        "img": "/work-img/edge-ledger-imgm.png",
+        "url": "https://edge-ledger-investment.netlify.app/"
+    },
+    {
+        "id": 3,
+        "title": "My Portfolio",
+        "about": "A website that displays my amazing skills (UI wasn't designed by me)",
+        "img": "/work-img/my-portfolio-img.png",
+        "url": "https://jamilamasa.netlify.app/"
+    },
+    {
+        "id": 4,
+        "title": "QR code generator",
+        "about": "We all desire a fast and seamless ways to share links, this application creates a QR code for links",
+        "img": "/work-img/QR-code_generator-img.png",
+        "url": "https://jamils-qrcode-generator.netlify.app/"
+    },
+    {
+        "id": 5,
+        "title": "Weight Converter",
+        "about": "This is a simple but amazing app to convert weight.",
+        "img": "/work-img/weight-converter-img.png",
+        "url": "https://jamils-weight-converter.netlify.app/"
+    }
+]
