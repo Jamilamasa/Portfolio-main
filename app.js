@@ -40,9 +40,23 @@ function showEducation(){
     educationContent.classList.add('show');
 }
 
+// My work (show more)
+const showMoreBtn = document.querySelector('.show-more');
+const works = document.querySelectorAll('.work');
 
 
-// Sticky menu background
+showMoreBtn.addEventListener('click', (e)=>{
+    works.forEach((work)=>{
+        work.classList.add('main');
+    })
+    showMoreBtn.style.display = "none"
+    e.preventDefault()
+})
+
+
+
+
+// Sticky navbar background
 window.addEventListener('scroll', function() {
     if (window.scrollY > 150) {
         this.document.querySelector('.nav-bar').style.opacity = 0.9;
@@ -66,3 +80,4 @@ $('.nav-bar a').on('click', function(event) {
         );
     }
 });
+
