@@ -5,6 +5,11 @@
 .l-heading {
     font-size: 34px;
 }
+.m-heading {
+    font-size: 45px;
+    font-weight: 600;
+    color: #fff;
+}
 .showcase {
     position: relative;
 }
@@ -38,6 +43,7 @@
     width: 50vw;
     height: 100vh;
     padding-top: 50px;
+    transition: all 0.5s;
 }
 .nav-bar .nav-menu > ul > li{
     display: block;
@@ -48,4 +54,27 @@
     top: 40px;
     left: 25px;
     cursor: pointer;
+}
+.about-img {
+    flex-basis: 100%;
+}
+
+p {
+    font-size: 14px;
+}
+.work-list {
+    display: flex;
+    flex-direction: column;
+    margin-top: 1.5rem;
+    margin-bottom: 40px;
+}
+#contact > .container.flex-container {
+    display: flex;
+    flex-direction: column;
+}
+.contact-me {
+    flex-basis: 100%;
+}
+.contact-form {
+    flex-basis: 100%;
 }
