@@ -44,7 +44,7 @@ function showEducation(){
 // My work (show more)
 const showMoreBtn = document.querySelector('.show-more');
 const workList = document.querySelector('.work-list')
-const works = document.querySelectorAll('.work');
+
 
 
 showMoreBtn.addEventListener('click', (e)=>{
@@ -66,6 +66,19 @@ showMoreBtn.addEventListener('click', (e)=>{
     })
     showMoreBtn.style.display = "none"
     e.preventDefault()
+})
+
+// Hamurger menu 
+const hamBurger = document.querySelector('.fa-bars');
+const menu = document.querySelector('.menu');
+const closeIcon = document.querySelector('.fa-times');
+// show menu
+hamBurger.addEventListener('click', ()=>{
+    menu.style.right = 0;
+})
+// hide menu
+closeIcon.addEventListener('click', ()=>{
+    menu.style.right = "-50vw";
 })
 
 
