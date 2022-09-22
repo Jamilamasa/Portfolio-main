@@ -43,6 +43,7 @@ function showEducation(){
 
 // My work (show more)
 const showMoreBtn = document.querySelector('.show-more');
+const showLessBtn = document.querySelector('.show-less');
 const workList = document.querySelector('.work-list')
 
 
@@ -52,7 +53,7 @@ showMoreBtn.addEventListener('click', (e)=>{
         output = ''
         works.forEach((work)=>{
             output += `
-            <div class="work">
+            <div class="work more-work">
             <img src=${work.img} alt=${work.title}>
             <div class="layer">
                 <h3>${work.title}</h3>
@@ -65,9 +66,21 @@ showMoreBtn.addEventListener('click', (e)=>{
         workList.innerHTML += output;
     })
     showMoreBtn.style.display = "none"
+    showLessBtn.classList.remove('hide')
     e.preventDefault()
 })
+showLessBtn.addEventListener('click', (e)=>{
+    const works = document.querySelectorAll('.work');
+    works.forEach((work)=>{
+        if(work.classList.contains('more-work')){
+            work.style.display = "none";
+        }
+    })
 
+    showMoreBtn.style.display = "block"
+    showLessBtn.classList.add('hide')
+    e.preventDefault()
+})
 // Hamurger menu 
 const hamBurger = document.querySelector('.fa-bars');
 const menu = document.querySelector('.menu');
@@ -81,6 +94,50 @@ closeIcon.addEventListener('click', ()=>{
     menu.style.right = "-50vw";
 })
 
+// form validation with regular expressions
+const nameInput = document.querySelector('[name="name"]');
+const emailInput = document.querySelector('[name="email"]');
+const messageInput = document.querySelector('[name="message"]');
+
+nameInput.addEventListener('blur', validateName);
+emailInput.addEventListener('blur', validateEmail);
+messageInput.addEventListener('blur', validateMessage);
+
+function validateName(e) {
+    const nameDiv = document.querySelector('.nameInput')
+    const name =  e.target.value;
+    const re = /^[a-zA-Z\s]{2,15}$/i
+
+    if(re.test(name)){
+        nameDiv.classList.remove('nameErr');
+    } else {
+        nameDiv.classList.add('nameErr');
+    }
+
+}
+function validateEmail(e) {
+    const emailDiv = document.querySelector('.emailInput')
+    const name =  e.target.value;
+    const re = /^([a-zA-Z0-9\.\_\-]+)@([a-zA-Z0-9\.\_\-]+)\.([a-zA-Z]{2,5})$/
+
+    if(re.test(name)){
+        emailDiv.classList.remove('emailErr');
+    } else {
+        emailDiv.classList.add('emailErr');
+    }
+    
+}
+function validateMessage(e) {
+    const messageDiv = document.querySelector('.messageInput')
+    const name =  e.target.value;
+    const re = /^[\w\W\d\D\s\S]{10,200}$/
+
+    if(re.test(name)){
+        messageDiv.classList.remove('messageErr');
+    } else {
+        messageDiv.classList.add('messageErr');
+    }
+}
 
 // Sticky navbar background
 window.addEventListener('scroll', function() {

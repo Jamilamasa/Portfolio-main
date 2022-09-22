@@ -111,13 +111,14 @@
                 </div>
             </div>
             <a href="#" class="btn show-more">See more</a>
+            <a href="#" class="btn show-less hide">See less</a>
         </div>
     </div>
     <!-- contact section -->
     <div id="contact">
+        <h1 class="m-heading">Contact Me</h1>
         <div class="container flex-container">
             <div class="contact-me">
-                <h1 class="m-heading">Contact Me</h1>
                 <p><a href="mailto:jamilamasa@gmail.com?subject=I want to hire you"><i class="fa-solid fa-paper-plane"></i> jamilamasa@gmail.com</a></p>
                 <p><a href="tel:806-006-2364"><i class="fa-solid fa-phone"></i> +234-806-006-2364</a></p>
                 <div class="social-icons">
@@ -130,9 +131,15 @@
             </div>
             <div class="contact-form">
                 <form name="contact" method="POST" data-netlify="true">
-                    <input type="text" name="name" placeholder="Enter your name" required>
-                    <input type="email" name="email" placeholder="Enter your email" required>
-                    <textarea name="message" rows="10" placeholder="Enter your message"></textarea>
+                    <div class="nameInput">
+                        <input type="text" name="name" placeholder="Enter your name" required>
+                    </div>
+                    <div class="emailInput">
+                        <input type="email" name="email" placeholder="Enter your email" required>
+                    </div>
+                    <div class="messageInput">
+                        <textarea name="message" rows="10" class="messageInput" placeholder="Enter your message"></textarea>
+                    </div>
                     <button type="submit" class="btn btn2">Submit</button>
                 </form>
             </div>
