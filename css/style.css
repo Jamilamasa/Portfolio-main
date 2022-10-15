@@ -1,5 +1,15 @@
 :root {
+    --primaryColor: #080808;
+    --textColor:#fff;
+    --textColorAlt:#ababab;
     --secondaryColor: #ff004f;
+    --secondaryColorAlt: #b54769;
+    --dark:#262626;
+}
+.light-mode {
+    --primaryColor: #fff;
+    --textColor:#080808;
+    --textColorAlt:#333;
 }
 
 * {
@@ -9,11 +19,12 @@
 }
 body {
     font-family: 'Roboto', sans-serif;
-    background-color: #080808;
-    color: #fff;
+    background-color: var(--primaryColor);
+    color: var(--textColor);
+    transition: background 0.3s ease-in-out;
 }
 a {
-    color: #fff;
+    color: var(--textColor);
     text-decoration: none;
 }
 .fa-solid.fa-times, .fa-solid.fa-bars {
@@ -48,14 +59,14 @@ a {
 .m-heading {
     font-size: 60px;
     font-weight: 600;
-    color: #fff;
+    color: var(--textColor);
 }
 .hide {
     display: none !important; 
 }
 .btn {
     display: block;
-    color: #fff;
+    color: var(--textColor);
     margin: 50px auto;
     width: fit-content;
     border: 1px solid var(--secondaryColor);
@@ -71,8 +82,16 @@ a {
     background-color: var(--secondaryColor);
 }
 /* Navbar styling */
+#icon {
+    object-fit: cover;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    color: var(--textColor);
+    transition: all 0.3s ease-in-out;
+}
 .nav-bar {
-    background-color: #080808;
+    background-color: var(--primaryColor);
     position: sticky;
     top: 0;
     z-index: 1;
@@ -126,11 +145,10 @@ a {
 }
 .showcase-img {
     background: url('/img/IMG-2097-removebg-preview.png') no-repeat center center/cover;
-   
 }
 /* About styling */
 #about {
-    color: #ababab;
+    color: var(--textColorAlt);
     padding: 80px 0;
 }
 #about > .container.flex-container {
@@ -180,7 +198,7 @@ a {
     margin: 10px 0;
 }
 .tab-contents ul li span {
-    color: #b54769;
+    color: var(--secondaryColorAlt);
     font-size: 14px;
     margin-bottom: 10px;
 }
@@ -239,7 +257,7 @@ a {
     color: var(--secondaryColor);
     font-size: 18px;
     line-height: 40px;
-    background: #fff;
+    background: var(--textColor);
     width: 40px;
     height: 40px;
     border-radius: 50%;
@@ -279,7 +297,7 @@ a {
 .social-icons a {
     font-size: 30px;
     margin-right: 15px;
-    color: #ababab;
+    color: var(--textColorAlt);
     display: inline-block;
     transition: all 0.5s;
 }
@@ -294,10 +312,10 @@ form input, form textarea{
     width: 100%;
     border: 0;
     outline: none;
-    background: #262626;
+    background: var(--dark);
     padding: 15px;
     margin: 15px 0;
-    color: #fff;
+    color: var(--textColor);
     font-size: 18px;
     border-radius: 6px;
 }
@@ -311,7 +329,7 @@ form > .btn2{
     width: 100%;
     text-align: center;
     padding: 25px 0;
-    background: #262626;
+    background: var(--dark);
     font-weight: 300;
     margin-top: 20px;
 }
@@ -321,7 +339,7 @@ form > .btn2{
 }
 .nameErr::after{
     content: 'Name must be between 2 and 15 word characters';
-    color: #ff004f;
+    color: var(--secondaryColor);
     position: absolute;
     width: 100%;
     height: 100%;
@@ -330,7 +348,7 @@ form > .btn2{
 }
 .emailErr::after{
     content: 'Enter a valid email';
-    color: #ff004f;
+    color: var(--secondaryColor);
     position: absolute;
     width: 100%;
     height: 100%;
@@ -339,7 +357,7 @@ form > .btn2{
 }
 .messageErr::after{
     content: 'Leave me a message between 10 and 50 charcters';
-    color: #ff004f;
+    color: var(--secondaryColor);
     position: absolute;
     width: 100%;
     height: 100%;

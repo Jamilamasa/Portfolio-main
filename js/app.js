@@ -77,8 +77,8 @@ showLessBtn.addEventListener('click', (e)=>{
         }
     })
 
-    showMoreBtn.style.display = "block"
     showLessBtn.classList.add('hide')
+    showMoreBtn.style.display = "block"
     e.preventDefault()
 })
 // Hamurger menu 
@@ -164,3 +164,22 @@ $('.nav-bar a').on('click', function(event) {
     }
 });
 
+// LightMode/DarkMode
+const sun = document.querySelector('.sun');
+const moon = document.querySelector('.moon');
+const body = document.getElementById('home');
+
+sun.addEventListener('click', lightTheme);
+moon.addEventListener('click', darkTheme);
+
+function darkTheme() {
+    body.classList.remove('light-mode');
+    sun.classList.remove('hide');
+    moon.classList.add('hide');
+}
+
+function lightTheme() {
+    body.classList.add('light-mode');
+    sun.classList.add('hide');
+    moon.classList.remove('hide');
+}
