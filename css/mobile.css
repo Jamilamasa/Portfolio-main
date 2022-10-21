@@ -1,3 +1,9 @@
+.light-mode {
+    --primaryColor: #fff;
+    --textColor:#080808;
+    --textColorAlt:#333;
+    --dark:#ccc;
+}
 .lead-text {
     font-size: 18px;
     margin-top: -50px;
@@ -8,7 +14,7 @@
 .m-heading {
     font-size: 45px;
     font-weight: 600;
-    color: #fff;
+    /* color: #fff; */
 }
 .showcase {
     position: relative;
