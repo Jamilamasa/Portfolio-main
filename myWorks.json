@@ -33,5 +33,12 @@
         "about": "This is a simple but amazing app to convert weight.",
         "img": "/work-img/weight-converter-img.png",
         "url": "https://jamils-weight-converter.netlify.app/"
+    },
+    {
+        "id": 6,
+        "title": "Track Calorie",
+        "about": "An application to track your calorie intake.",
+        "img": "/work-img/trackcalorie.jpg",
+        "url": "https://trackcalorie.netlify.app/"
     }
 ]
