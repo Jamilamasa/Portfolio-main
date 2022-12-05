@@ -40,5 +40,12 @@
         "about": "An application to track your calorie intake.",
         "img": "/work-img/trackcalorie.jpg",
         "url": "https://trackcalorie.netlify.app/"
+    },
+    {
+        "id": 6,
+        "title": "Expense Tracker",
+        "about": "This appliation would help you track how much you've spent with respect to your income.",
+        "img": "/work-img/expense-tracker.jpg",
+        "url": "https://jamils-expense-tracker.netlify.app/"
     }
 ]
