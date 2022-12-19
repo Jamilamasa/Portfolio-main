@@ -16,7 +16,7 @@
     {
         "id": 3,
         "title": "My Portfolio",
-        "about": "A website that displays my amazing skills (UI wasn't designed by me)",
+        "about": "A website that displays my amazing skills",
         "img": "/work-img/my-portfolio-img.png",
         "url": "https://jamilamasa.netlify.app/"
     },
