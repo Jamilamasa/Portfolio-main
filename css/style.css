@@ -357,7 +357,7 @@ form > .btn2{
     bottom: -4.3rem;
 }
 .messageErr::after{
-    content: 'Leave me a message between 10 and 50 charcters';
+    content: 'Leave me a message between 10 and 120 charcters';
     color: var(--secondaryColor);
     position: absolute;
     width: 100%;
