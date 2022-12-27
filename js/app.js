@@ -130,7 +130,7 @@ function validateEmail(e) {
 function validateMessage(e) {
     const messageDiv = document.querySelector('.messageInput')
     const name =  e.target.value;
-    const re = /^\w+(?:\s+\w+){10,249}$/
+    const re = /^(?:\b\w+\b[\s\r\n]*){10,250}$/
           ///^[\w\W\d\D\s\S]{10,200}$/
 
 
