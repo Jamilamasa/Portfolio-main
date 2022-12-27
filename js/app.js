@@ -134,7 +134,7 @@ function validateMessage(e) {
           ///^[\w\W\d\D\s\S]{10,200}$/
 
     if(name.match(re)){
-        messageDiv.classList.remove('messageErr');
+        messageDiv.classList.remove('messageErr');}
     else {
         messageDiv.classList.add('messageErr')
     }
