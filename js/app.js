@@ -167,6 +167,13 @@ $('.nav-bar a').on('click', function(event) {
     }
 });
 
+$(document).ready(function () {
+    $(".btn2").click(function () {
+        $(".btn2").attr("disabled", false);
+        return true;
+    });
+});
+
 // LightMode/DarkMode
 const sun = document.querySelector('.sun');
 const moon = document.querySelector('.moon');
