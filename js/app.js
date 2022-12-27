@@ -130,19 +130,15 @@ function validateEmail(e) {
 function validateMessage(e) {
     const messageDiv = document.querySelector('.messageInput')
     const name =  e.target.value;
-    const re = /\b\S+\b/g
+    const re = /^\w+(?:\s+\w+){0,249}$/
           ///^[\w\W\d\D\s\S]{10,200}$/
 
-    if(name.match(re)){
-        messageDiv.classList.remove('messageErr');}
-    else {
-        messageDiv.classList.add('messageErr')
+
+    if(re.test(name)){
+        messageDiv.classList.remove('messageErr');
+    } else {
+        messageDiv.classList.add('messageErr');
     }
-    //if(re.test(name)){
-      //  messageDiv.classList.remove('messageErr');
-    //} else {
-      //  messageDiv.classList.add('messageErr');
-    //}
 }
 
 // Sticky navbar background
