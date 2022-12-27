@@ -106,7 +106,7 @@ messageInput.addEventListener('blur', validateMessage);
 function validateName(e) {
     const nameDiv = document.querySelector('.nameInput')
     const name =  e.target.value;
-    const re = /^[a-zA-Z\s]{2,15}$/i
+    const re = /^[a-zA-Z\s]{2,20}$/i
 
     if(re.test(name)){
         nameDiv.classList.remove('nameErr');
@@ -130,13 +130,19 @@ function validateEmail(e) {
 function validateMessage(e) {
     const messageDiv = document.querySelector('.messageInput')
     const name =  e.target.value;
-    const re = /^[\w\W\d\D\s\S]{10,200}$/
+    const re = /\b\S+\b/g
+          ///^[\w\W\d\D\s\S]{10,200}$/
 
-    if(re.test(name)){
+    if(name.match(re)){
         messageDiv.classList.remove('messageErr');
-    } else {
-        messageDiv.classList.add('messageErr');
+    else {
+        messageDiv.classList.add('messageErr')
     }
+    //if(re.test(name)){
+      //  messageDiv.classList.remove('messageErr');
+    //} else {
+      //  messageDiv.classList.add('messageErr');
+    //}
 }
 
 // Sticky navbar background
